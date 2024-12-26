@@ -1,5 +1,6 @@
 import type {Metadata} from 'next'
 import './globals.css'
+import ItineraryPage from './itineraryPage/page'
 
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='font-poppins'>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }

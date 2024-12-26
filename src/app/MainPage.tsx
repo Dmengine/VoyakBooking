@@ -27,7 +27,7 @@ const MainPage = () => {
             </div>
             <div className='flex mt-5 justify-between'>
                 <div className='w-[341px] h-[94px]'>
-                    <div className='w-[233px] h-[30px] flex justify-evenly items-center'>
+                    <div className='w-[250px] h-[30px] bg-orange-200 flex justify-evenly items-center'>
                         <Image
                             src='/CalendarBlank.png'
                             width={20}
@@ -56,7 +56,7 @@ const MainPage = () => {
                     </div>
                 </div>
                 <div className='flex space-x-2'>
-                    <div className='bg-customBlue flex items-center justify-center w-[160px] h-20'>
+                    <div className='bg-customBlue flex items-center justify-center w-[160px] h-10'>
                         <Image
                                 src='/UserPlus.png'
                                 width={20}
@@ -80,6 +80,7 @@ const MainPage = () => {
                         text='Activities'
                         Ptext='Build, personalize, and optimize your itineraries with our trip planner.'
                         Btext='Add Activities'
+                        Bstyle = 'w-[242px] h-[46px] rounded-[4px] bg-blue-500 text-white mt-5'
                     />
                     <Card
                         text='Hotels'
@@ -88,13 +89,14 @@ const MainPage = () => {
                         cardStyles='bg-customBlue w-[270px] h-[193px] p-4 rounded-[4px]'
                         h2Style = 'text-black text-base font-bold mb-3'
                         textStyles='text-black text-sm font-medium'
+                        Bstyle = 'w-[242px] h-[46px] rounded-[4px] bg-blue-500 text-white mt-5'
                     />
                     <Card
                         text='Flights'
                         Ptext='Build, personalize, and optimize your itineraries with our trip planner.'
                         Btext='Add Flights'
                         cardStyles='bg-blue-500 w-[270px] h-[193px] p-4 rounded-[4px]'
-                        Bstyle = 'w-[242px] h-[46px] rounded-[4px] bg-white mt-8'
+                        Bstyle = 'w-[242px] h-[46px] rounded-[4px] bg-white text-customBrown mt-5'
                     />
                 </div>
                 <div className='w-[109px] h-[40px] flex justify-between items-center -mt-5'>
