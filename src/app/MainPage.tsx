@@ -5,7 +5,7 @@ import IconWithText from './components/IconWithText'
 import { Button } from './components/Button'
 import FlightCard from './components/FlightCard'
 import { HotelsCard } from './components/HotelsCard'
-import { AttractionsCard } from './components/ActractionsCard'
+import { AttractionsCard } from './components/AttractionsCard'
 
 const MainPage = () => {
   return (

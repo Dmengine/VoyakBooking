@@ -10,7 +10,7 @@ export const AttractionsCard = () => {
         <div className='ml-6 w-[1280px] h-[274px] flex items-center justify-between'>
             <div className='relative w-[232px] h-[224px]'>
               <Image
-                src='/Rectangle34371.png'
+                src='/Rectangle 34371.png'
                 width={232}
                 height={224}
                 alt='Rectangle'
