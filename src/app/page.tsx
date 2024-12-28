@@ -7,7 +7,7 @@ export default function Home() {
     <main className="">
       <div>
         <Navbar/>
-        <div className="flex bg-customLightGray">
+        <div className="mr-5 flex bg-customLightGray">
           <div className="hidden md:block"><SideNav /></div>
           <MainPage />
         </div>
