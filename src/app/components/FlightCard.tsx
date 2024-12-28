@@ -5,8 +5,8 @@ import IconWithText from "./IconWithText";
 
 const FlightCard = () => {
   return (
-    <div className="w-[350px] md:w-[1366px] md:h-[275px] h-[390px] flex fex-col justify-between bg-white">
-      <div className="flex-col justify-center items-center md:w-[1280px] h-[274px] md:ml-6">
+    <div className="overflow-hidden w-[360px] md:w-[1366px] md:h-[275px] h-[390px] flex fex-col justify-between bg-white">
+      <div className="flex-col justify-center w-full items-center md:w-[1280px] h-[274px] md:ml-6">
         <div className="w-[350px] md:w-[1248px] h-[290px] md:h-[78px] mt-5 md:flex md:justify-between justify-center items-center">
           <div className="w-[200px] flex justify-between md:w-[211px] md:h-[62px] md:flex items-center md:justify-evenly">
             <Image
@@ -20,10 +20,6 @@ const FlightCard = () => {
                 <p className="text-black font-semibold text-base">
                   American Airlines
                 </p>
-                {/* <Image src="/line.png" width={3} height={4} alt="line" />
-                <p className="text-customSlate font-semibold text-base">
-                  Solo Trip
-                </p> */}
               </div>
               <div className="flex w-[146px] h-[30px] justify-between items-center">
                 <p className="font-medium text-base text-customSlate">AA-829</p>
@@ -116,7 +112,7 @@ const FlightCard = () => {
           </h2>
         </div>
       </div>
-      <div className="w-[46px] h-[272px] bg-customRed flex justify-center items-center">
+      <div className="w-[46px] hidden h-[272px] bg-customRed md:flex justify-center items-center">
         <Image src="/X.png" width={24} height={24} alt="Vector" />
       </div>
     </div>

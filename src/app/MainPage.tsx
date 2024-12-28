@@ -25,7 +25,7 @@ const MainPage = () => {
     }
 
   return (
-    <div className="ml-6 mr-6 mt-10 w-[360px] md:w-[1478px] h-[3316px] bg-white">
+    <div className="ml-6 mr-6 mt-10 border-2 border-red-400 w-[360px] md:w-[1478px] h-[3316px] bg-white">
       <div className="relative md:w-[1412px] mt-5 md:ml-6">
         <Image src="/banner.png" width={1412} height={200} alt="banner" className="h-20 w-full md:w-[1412px] md:h-[200px]"/>
         <div className="items-center justify-center flex md:w-16 md:h-16 w-3 h-3 top-7 left-2 absolute md:top-5 md:left-6">
@@ -140,6 +140,13 @@ const MainPage = () => {
           <FlightCard />
         </div>
       </div>
+
+
+      
+
+
+
+
 
     </div>
   );
