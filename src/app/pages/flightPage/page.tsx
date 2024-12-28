@@ -13,7 +13,7 @@ const Flights: React.FC = () => {
     location: '',
     destination: '',
     departureDate: '',
-  });30003000
+  });
 
   const [flights, setFlights] = useState<FlightDetails[]>([]);
 
