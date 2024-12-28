@@ -25,7 +25,7 @@ const MainPage = () => {
     }
 
   return (
-    <div className="ml-6 mr-6 mt-10 border-2 border-red-400 w-[360px] md:w-[1478px] h-[3316px] bg-white">
+    <div className="ml-6 mr-6 mt-10 w-[360px] md:w-[1478px] h-[3316px] bg-white">
       <div className="relative md:w-[1412px] mt-5 md:ml-6">
         <Image src="/banner.png" width={1412} height={200} alt="banner" className="h-20 w-full md:w-[1412px] md:h-[200px]"/>
         <div className="items-center justify-center flex md:w-16 md:h-16 w-3 h-3 top-7 left-2 absolute md:top-5 md:left-6">
@@ -110,6 +110,36 @@ const MainPage = () => {
       </div>
 
 
+      <div className="w-[213px] h-[52px] ml-6 mt-24">
+          <h2 className="text-xl font-semibold">Trip itineraries</h2>
+          <p className="text-xs text-customGrayBlue font-medium">
+            Your trip itineraries are placed here
+          </p>
+      </div>
+
+
+      <div className="bg-customLightGray w-full md:w-[1412px] h-[710px] flex flex-col items-center">
+        <div className="w-full md:w-[1366px] h-[46px] mt-5 flex justify-between ">
+          <div className="w-[110px] h-11">
+            <IconWithText
+              iconImage="/AirplaneInFlight.png"
+              iconText="Flights"
+              iconStyles="flex items-center justify-between"
+              textStyles="font-semibold text-lg "
+              imageStyles="w-10 h-10"
+            />
+          </div>
+          <Button
+            text="Add Flights"
+            buttonStyles="w-[153px] h-[43px]  text-base font-semibold rounded-[4px] bg-white text-blue-600"
+            onClick={handleAddFlightsClick}
+          />
+        </div>
+        <div className="w-full md:w-[1366px] h-[572px] mt-7 space-y-4">
+          <FlightCard />
+          <FlightCard />
+        </div>
+      </div>
 
     </div>
   );
