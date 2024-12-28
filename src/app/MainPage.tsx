@@ -25,9 +25,9 @@ const MainPage = () => {
     }
 
   return (
-    <div className="ml-6 mr-6 mt-10 w-[1478px] h-[3316px] bg-white">
-      <div className="relative w-[1412px] h-[3295px] mt-5 ml-6">
-        <Image src="/banner.png" width={1412} height={200} alt="banner" />
+    <div className="ml-6 mr-6 mt-10 md:w-[1478px] h-[3316px] bg-white">
+      <div className="relative md:w-[1412px] h-[3295px] mt-5 ml-6">
+        <Image src="/banner.png" width={1412} height={200} alt="banner" className="h-20 w-80 md:w-[1412px] md:h-[200px]"/>
         <div className="items-center justify-center flex w-16 h-16 absolute top-5 left-6">
           <Image src="/ArrowLeft.png" width={24} height={24} alt="arrow" />
         </div>

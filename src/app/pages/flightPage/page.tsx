@@ -17,7 +17,6 @@ const Flights: React.FC = () => {
 
   const [flights, setFlights] = useState<FlightDetails[]>([]);
 
-  
   useEffect(() => {
     const storedFlights = localStorage.getItem('flights');
     if (storedFlights) {
@@ -25,7 +24,6 @@ const Flights: React.FC = () => {
     }
   }, []);
 
- 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFlightDetails((prev) => ({
@@ -34,26 +32,23 @@ const Flights: React.FC = () => {
     }));
   };
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    
     const updatedFlights = [...flights, flightDetails];
     setFlights(updatedFlights);
     localStorage.setItem('flights', JSON.stringify(updatedFlights));
 
-    
     setFlightDetails({ location: '', destination: '', departureDate: '' });
   };
 
   return (
-    <div className="ml-6 border-2 border-red-300 p-4 w-auto">
-      <h1 className="text-xl font-bold mb-4">Flights</h1>
+    <div className="w-full max-w-4xl mx-auto p-6 border-2">
+      <h1 className="text-xl font-bold mb-4 text-center">Flights</h1>
 
-      
-      <form onSubmit={handleSubmit} className="flex justify-between space-x-4">
-        <div>
+      {/* Form Section */}
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0 space-y-4 sm:justify-between">
+        <div className="flex-1">
           <label htmlFor="location" className="block text-sm font-medium">
             Location:
           </label>
@@ -69,7 +64,7 @@ const Flights: React.FC = () => {
           />
         </div>
 
-        <div>
+        <div className="flex-1">
           <label htmlFor="destination" className="block text-sm font-medium">
             Destination:
           </label>
@@ -85,7 +80,7 @@ const Flights: React.FC = () => {
           />
         </div>
 
-        <div>
+        <div className="flex-1">
           <label htmlFor="departureDate" className="block text-sm font-medium">
             Departure Date:
           </label>
@@ -102,13 +97,13 @@ const Flights: React.FC = () => {
 
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded font-medium"
+          className="px-4 py-2 bg-blue-500 text-white rounded font-medium w-full sm:w-auto mt-4 sm:mt-0"
         >
           Add Flight
         </button>
       </form>
 
-      
+      {/* Flight List Section */}
       <div className="mt-6">
         <h2 className="text-lg font-semibold mb-2">Your Flights</h2>
         {flights.length > 0 ? (

@@ -1,26 +1,27 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 interface HotelDetails {
   hotelName: string;
   hotelLocation: string;
   budget: number;
   hotelDescription: string;
+  image?: string;
 }
 
 const Hotels: React.FC = () => {
   const [hotelDetails, setHotelDetails] = useState<HotelDetails>({
-    hotelName: '',
-    hotelLocation: '',
-    hotelDescription: '',
+    hotelName: "",
+    hotelLocation: "",
+    hotelDescription: "",
     budget: 0,
   });
 
   const [hotels, setHotels] = useState<HotelDetails[]>([]);
 
   useEffect(() => {
-    const storedHotels = localStorage.getItem('hotels');
+    const storedHotels = localStorage.getItem("hotels");
     if (storedHotels) {
       setHotels(JSON.parse(storedHotels));
     }
@@ -30,19 +31,41 @@ const Hotels: React.FC = () => {
     e.preventDefault();
     const updatedHotels = [...hotels, hotelDetails];
     setHotels(updatedHotels);
-    localStorage.setItem('hotels', JSON.stringify(updatedHotels));
-    setHotelDetails({ hotelName: '', hotelLocation: '', hotelDescription: '', budget: 0 });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    localStorage.setItem("hotels", JSON.stringify(updatedHotels));
     setHotelDetails({
-      ...hotelDetails,
-      [name]: name === 'budget' ? parseFloat(value) : value,
+      hotelName: "",
+      hotelLocation: "",
+      hotelDescription: "",
+      budget: 0,
     });
   };
 
-  
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setHotelDetails({
+      ...hotelDetails,
+      [name]: name === "budget" ? parseFloat(value) : value,
+    });
+  };
+
+  const handleDelete = (index: number) => {
+    const updatedHotels = hotels.filter((hotel, i) => i !== index);
+    setHotels(updatedHotels);
+    localStorage.setItem("hotels", JSON.stringify(updatedHotels));
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setHotelDetails({
+        ...hotelDetails,
+        image: imageUrl,
+      });
+    }
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -52,7 +75,10 @@ const Hotels: React.FC = () => {
         onSubmit={handleSubmit}
       >
         <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2" htmlFor="hotelName">
+          <label
+            className="block text-sm font-semibold mb-2"
+            htmlFor="hotelName"
+          >
             Hotel Name
           </label>
           <input
@@ -61,12 +87,15 @@ const Hotels: React.FC = () => {
             type="text"
             value={hotelDetails.hotelName}
             onChange={handleInputChange}
-            className="w-full p-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full p-2 border text-black rounded-md focus:outline-none focus:ring focus:ring-blue-300"
             required
           />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2" htmlFor="hotelLocation">
+          <label
+            className="block text-sm font-semibold mb-2"
+            htmlFor="hotelLocation"
+          >
             Hotel Location
           </label>
           <input
@@ -75,7 +104,7 @@ const Hotels: React.FC = () => {
             type="text"
             value={hotelDetails.hotelLocation}
             onChange={handleInputChange}
-            className="w-full p-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full p-2 border text-black rounded-md focus:outline-none focus:ring focus:ring-blue-300"
             required
           />
         </div>
@@ -89,12 +118,15 @@ const Hotels: React.FC = () => {
             type="number"
             value={hotelDetails.budget}
             onChange={handleInputChange}
-            className="w-full p-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full p-2 border text-black rounded-md focus:outline-none focus:ring focus:ring-blue-300"
             required
           />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-semibold mb-2" htmlFor="hotelDescription">
+          <label
+            className="block text-sm font-semibold mb-2"
+            htmlFor="hotelDescription"
+          >
             Description
           </label>
           <textarea
@@ -102,10 +134,23 @@ const Hotels: React.FC = () => {
             name="hotelDescription"
             value={hotelDetails.hotelDescription}
             onChange={handleInputChange}
-            className="w-full p-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full p-2 border text-black rounded-md focus:outline-none focus:ring focus:ring-blue-300"
             rows={3}
             required
           ></textarea>
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-semibold mb-2" htmlFor="hotelImage">
+            Hotel Image
+          </label>
+          <input
+            id="hotelImage"
+            name="hotelImage"
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="w-full p-2 border text-black rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+          />
         </div>
         <button
           type="submit"
@@ -117,7 +162,9 @@ const Hotels: React.FC = () => {
 
       {/* this is where the added hotels will be displayed */}
       <div className="mt-8">
-        <h2 className="text-xl font-semibold text-center mb-4">Your Added Hotels</h2>
+        <h2 className="text-xl font-semibold text-center mb-4">
+          Your Added Hotels
+        </h2>
         {hotels.length === 0 ? (
           <p className="text-center text-gray-500">No hotels added yet.</p>
         ) : (
@@ -127,10 +174,25 @@ const Hotels: React.FC = () => {
                 key={index}
                 className="bg-white shadow-md rounded-md p-4 border border-gray-200"
               >
+                {hotel.image && (
+                  <img
+                    src={hotel.image}
+                    alt={hotel.hotelName}
+                    className="w-full h-48 object-cover rounded-md mb-4"
+                  />
+                )}
                 <h3 className="text-lg font-bold">{hotel.hotelName}</h3>
                 <p className="text-sm text-gray-500">{hotel.hotelLocation}</p>
-                <p className="text-sm text-gray-500 mt-2">Budget: ${hotel.budget}</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  Budget: ${hotel.budget}
+                </p>
                 <p className="text-sm mt-2">{hotel.hotelDescription}</p>
+                <button
+                  onClick={() => handleDelete(index)}
+                  className="mt-4 bg-red-500 text-white py-1 px-2 rounded-md hover:bg-red-600"
+                >
+                  Delete
+                </button>
               </div>
             ))}
           </div>
