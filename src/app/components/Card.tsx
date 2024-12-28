@@ -8,6 +8,8 @@ interface CardProps {
     h2Style?: string;
     Btext: string;
     Bstyle?: string;
+    onClick?: () => void;
+
 }
 
 const Card: React.FC<CardProps> = ({
@@ -17,13 +19,14 @@ const Card: React.FC<CardProps> = ({
     h2Style = 'text-white text-base font-bold mb-3',
     Ptext,
     Btext,
+    onClick,
     Bstyle = 'w-[242px] h-[46px] rounded-[4px] bg-blue-500 mt-8'
 }) => {
   return (
     <div className={cardStyles}>
         <h2 className={h2Style}>{text}</h2>
         <p className={textStyles}>{Ptext}</p>
-        <button className={Bstyle}>{Btext}</button>
+        <button onClick={onClick} className={Bstyle}>{Btext}</button>
     </div>
   )
 }

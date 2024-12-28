@@ -1,6 +1,7 @@
-import Navbar from "../components/Navbar";
-import SideNav from "../components/SideNav";
-import ItineraryPage from "./page";
+import Navbar from "../../components/Navbar";
+import SideNav from "../../components/SideNav";
+import Activities from "./page";
+
 
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
         <Navbar/>
         <div className="flex bg-customLightGray">
           <div className="hidden md:block"><SideNav /></div>
-          <ItineraryPage />
+          <Activities />
         </div>
       </div>
     </main>

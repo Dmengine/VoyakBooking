@@ -1,6 +1,6 @@
 import type {Metadata} from 'next'
 import './globals.css'
-import ItineraryPage from './itineraryPage/page'
+import ItineraryPage from './pages/itineraryPage/page'
 
 
 export const metadata = {
