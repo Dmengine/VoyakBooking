@@ -32,7 +32,7 @@ export const HotelsCard = () => {
                 <div className='w-full md:w-[1000px] md:h-1/2  md:flex md:justify-between md:items-center'>
                     <div className='w-[350px] space-y-2 md:w-1/2 md:h-full'>
                         <h2 className='font-semibold text-xl'>Riviera Resort, Lekki</h2>
-                        <p className='md:text-base font-medium w-[320px] md:w-[445px] h-[48px]'>18, Kenneth Agbakuru Street, Off Access Bank  Admiralty Way, Lekki Phase1</p>
+                        <p className='md:text-base text-sm font-medium w-[320px] md:w-[445px] h-[48px]'>18, Kenneth Agbakuru Street, Off Access Bank  Admiralty Way, Lekki Phase1</p>
                         <div className='flex w-[300px] md:w-[360px] h-[24px] justify-between'>
                             <IconWithText
                                 iconImage='/Map.png'

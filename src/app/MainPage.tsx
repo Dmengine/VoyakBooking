@@ -158,7 +158,7 @@ const MainPage = () => {
           <Button
             text="Add Hotels"
             buttonStyles="w-[153px] h-[43px]  text-base font-semibold rounded-[4px] bg-white text-blue-600"
-            onClick={handleAddFlightsClick}
+            onClick={handleAddHotelClick}
           />
         </div>
         <div className="w-[320px] md:w-[1366px] h-[572px] mt-7 space-y-6">
@@ -168,7 +168,29 @@ const MainPage = () => {
       </div>
 
 
-
+      {/* Activities */}
+      <div className="bg-blue-600 md:w-[1412px] h-[1200px] md:h-[710px] flex flex-col items-center">
+        <div className="w-full md:w-[1366px] h-[46px] mt-5 flex justify-between ">
+          <div className="w-[110px] h-11">
+            <IconWithText
+              iconImage="/RoadHorizon.png"
+              iconText="Activities"
+              iconStyles="flex items-center justify-between"
+              textStyles="font-semibold text-lg text-white"
+              imageStyles="w-10 h-10"
+            />
+          </div>
+          <Button
+            text="Add Activities"
+            buttonStyles="w-[153px] h-[43px]  text-base font-semibold rounded-[4px] bg-white text-blue-600"
+            onClick={handleAddActtivitiesPage}
+          />
+        </div>
+        <div className="w-[320px] md:w-[1366px] h-[572px] mt-7 space-y-6">
+          <AttractionsCard />
+          <AttractionsCard />
+        </div>
+      </div>
 
 
     </div>

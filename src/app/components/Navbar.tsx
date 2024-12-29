@@ -1,13 +1,21 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import IconWithText from './IconWithText'
 import { Button } from './Button'
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+
+  const router = useRouter();
+
+  const handleAddHotelClick = () => {
+    router.push("/pages/hotelPage")
+};
   return (
     <nav className="flex flex-col sm:flex-row w-full h-[134px] p-4 sm:px-10 items-center">
       <div className="flex w-full sm:w-[486px] h-[56px] justify-between">
-        <Image src="/logo.png" alt="logo" width={58} height={56} />
+        <Image src="/logo.png" alt="logo" width={58} height={56} onClick={handleAddHotelClick} />
         <div className="relative w-[400px] h-[56px]">
           <input
             type="text"
@@ -23,7 +31,7 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <div className=" justify-evenly w-[480px] h-[64px] ml-72 hidden sm:flex">
+      <div className=" justify-evenly w-[650px] h-[64px] ml-72 hidden sm:flex">
         <IconWithText 
           iconImage="/House.png" 
           iconText="Home"
@@ -71,7 +79,7 @@ const Navbar = () => {
         text="Subscribe"
         buttonStyles="ml-10 w-[101px] h-[40px] border-r rounded-[4px] bg-blue-500 text-white hidden sm:block"
       />
-      <div className="ml-10 justify-evenly items-center w-[336px] h-[64px] hidden sm:flex">
+      <div className="ml-10 justify-evenly items-center w-[500px] h-[64px] hidden sm:flex">
         <IconWithText 
           iconImage="/Bell.png" 
           iconText="Notification"
@@ -104,8 +112,9 @@ const Navbar = () => {
           <Image 
             src="/CaretDown.png"
             alt="caret"
-            width={30}
-            height={24}
+            width={40}
+            height={2}
+            className='w-10 h-8 mt-3'
           />
         </div>
       </div>
