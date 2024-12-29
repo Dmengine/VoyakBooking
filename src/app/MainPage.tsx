@@ -144,7 +144,7 @@ const MainPage = () => {
 
       
       {/* HotelCard */}
-      <div className="border-2 border-blue-600 bg-customBlack w-full md:w-[1412px] h-[1200px] md:h-[710px] flex flex-col items-center">
+      <div className=" bg-customBlack w-full md:w-[1412px] h-[1200px] md:h-[710px] flex flex-col items-center">
         <div className="w-full md:w-[1366px] h-[46px] mt-5 flex justify-between ">
           <div className="w-[110px] h-11">
             <IconWithText
