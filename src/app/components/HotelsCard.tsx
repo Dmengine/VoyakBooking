@@ -4,7 +4,7 @@ import IconWithText from './IconWithText'
 
 export const HotelsCard = () => {
   return (
-    <div className='overflow-hidden pl-4 w-[360px] md:w-[1366px] h-[530px] md:h-[275px] md:flex justify-between bg-white'>
+    <div className='overflow-hidden pl-4 w-[340px] md:w-[1366px] h-[530px] md:h-[275px] md:flex justify-between bg-white'>
         <div className='ml-6 w-full md:w-[1280px] h-[274px] md:flex items-center md:justify-between'>
             <div className='mt-3 -ml-6 flex justify-center items-center relative w-full md:w-[232px] h-[224px]'>
                 <Image
