@@ -5,7 +5,7 @@ import IconWithText from "./IconWithText";
 
 const FlightCard = () => {
   return (
-    <div className="overflow-hidden w-[360px] md:w-[1366px] md:h-[275px] h-[390px] flex fex-col justify-between bg-white">
+    <div className="overflow-hidden w-[360px] md:w-[1366px] md:h-[275px] h-[390px] flex justify-between bg-white">
       <div className="flex-col justify-center w-full items-center md:w-[1280px] h-[274px] md:ml-6">
         <div className="w-[350px] md:w-[1248px] h-[290px] md:h-[78px] mt-5 md:flex md:justify-between justify-center items-center">
           <div className="w-[200px] flex justify-between md:w-[211px] md:h-[62px] md:flex items-center md:justify-evenly">
