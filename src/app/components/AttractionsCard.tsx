@@ -64,7 +64,7 @@ export const AttractionsCard = () => {
                 />
               </div>
             </div>
-            <div className="w-[310px] mt-7 mb-4 md:w-1/3 flex md:flex-col justify-start md:items-center h-full">
+            <div className="w-[310px] mt-9 mb-4 md:w-1/3 flex md:flex-col justify-start md:items-center h-full">
               <h2 className="w-[176px] h-[36px] font-semibold text-lg md:text-[28px]">
                 ₦123,450.00
               </h2>
@@ -103,14 +103,14 @@ export const AttractionsCard = () => {
           </div>
           <div className="flex justify-between items-center w-[300px] md:w-full h-10">
             <div className="w-[180px] md:w-[234px] h-[26px] flex justify-between items-center">
-              <h2 className="font-semibold text-base text-blue-600">
+              <h2 className="font-semibold text-[12px] md:text-base text-blue-600">
                 Hotel details
               </h2>
-              <h2 className="font-semibold text-base text-blue-600">
+              <h2 className="font-semibold text-[12px] md:text-base text-blue-600">
                 Price details
               </h2>
             </div>
-            <h2 className="font-semibold text-base text-blue-600">
+            <h2 className="font-semibold text-[12px] md:text-base text-blue-600">
               Edit details
             </h2>
           </div>

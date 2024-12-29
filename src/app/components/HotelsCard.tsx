@@ -107,14 +107,14 @@ export const HotelsCard = () => {
           </div>
           <div className="flex justify-between items-center w-[300px] md:w-full h-10">
             <div className="w-[180px] md:w-[234px] h-[26px] flex justify-between items-center">
-              <h2 className="font-semibold text-base text-blue-600">
+              <h2 className="font-semibold text-[12px] md:text-base text-blue-600">
                 Hotel details
               </h2>
-              <h2 className="font-semibold text-base text-blue-600">
+              <h2 className="font-semibold text-[12px] md:text-base text-blue-600">
                 Price details
               </h2>
             </div>
-            <h2 className="font-semibold text-base text-blue-600">
+            <h2 className="font-semibold text-[12px] md:text-base text-blue-600">
               Edit details
             </h2>
           </div>

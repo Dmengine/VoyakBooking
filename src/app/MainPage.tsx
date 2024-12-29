@@ -158,7 +158,7 @@ const MainPage = () => {
           </div>
           <Button
             text="Add Hotels"
-            buttonStyles="w-[153px] h-[43px]  text-base font-semibold rounded-[4px] bg-white text-blue-600"
+            buttonStyles="w-[153px] h-[43px]  text-base font-semibold rounded-[4px] bg-white text-customBlack"
             onClick={handleAddHotelClick}
           />
         </div>
