@@ -50,9 +50,17 @@ const FlightCard = () => {
                 alt="line"
               />
             </div>
-            <Image src="/Group 9.png" width={387} height={8} alt="line" className="w-[387px]"/>
+            <Image
+              src="/Group 9.png"
+              width={387}
+              height={8}
+              alt="line"
+              className="w-[387px]"
+            />
             <div className="flex w-[330px] md:w-[387px] h-[24px] justify-between items-center">
-              <h2 className="font-semibold text-base ml-10 md:-ml-[2px]">LOS</h2>
+              <h2 className="font-semibold text-base ml-10 md:-ml-[2px]">
+                LOS
+              </h2>
               <p className="font-medium text-base text-customSlate">Direct</p>
               <h2 className="font-semibold text-base">SIN</h2>
             </div>

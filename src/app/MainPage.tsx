@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
 import Card from "./components/Card";
@@ -10,45 +10,51 @@ import { AttractionsCard } from "./components/AttractionsCard";
 import { useRouter } from "next/navigation";
 
 const MainPage = () => {
-    const router = useRouter();
+  const router = useRouter();
 
-    const handleAddFlightsClick = () => {
-        router.push("/pages/flightPage")
-    };
+  const handleAddFlightsClick = () => {
+    router.push("/pages/flightPage");
+  };
 
-    const handleAddHotelClick = () => {
-        router.push("/pages/hotelPage")
-    };
+  const handleAddHotelClick = () => {
+    router.push("/pages/hotelPage");
+  };
 
-    const handleAddActtivitiesPage = () => {
-        router.push("/pages/activitiesPage")
-    }
+  const handleAddActtivitiesPage = () => {
+    router.push("/pages/activitiesPage");
+  };
 
   return (
     <div className="ml-6 mr-6 mt-10 w-[340px] md:w-[1478px] h-[3316px] bg-white">
       <div className="relative md:w-[1412px] mt-5 md:ml-6">
-        <Image src="/banner.png" width={1412} height={200} alt="banner" className="h-20 w-full md:w-[1412px] md:h-[200px]"/>
+        <Image
+          src="/banner.png"
+          width={1412}
+          height={200}
+          alt="banner"
+          className="h-20 w-full md:w-[1412px] md:h-[200px]"
+        />
         <div className="items-center justify-center flex md:w-16 md:h-16 w-3 h-3 top-7 left-2 absolute md:top-5 md:left-6">
           <Image src="/ArrowLeft.png" width={24} height={24} alt="arrow" />
         </div>
       </div>
-      
+
       <div className="items-center p-4 ga md:flex justify-between">
         <div className=" h-[94px] md:w-[341px]">
           <div className="w-[250px] h-[30px] bg-orange-200 flex justify-evenly items-center">
-          <Image
-            src="/CalendarBlank.png"
-            width={20}
-            height={16}
-            alt="calendar"
-          />
-          <h3 className="text-sm font-medium text-customBrown">
-            21 March 2024
-          </h3>
-          <Image src="/ArrowRight.png" width={16} height={16} alt="arrow" />
-          <h4 className="text-sm font-medium text-customBrown">
-            21 April 2024
-          </h4>
+            <Image
+              src="/CalendarBlank.png"
+              width={20}
+              height={16}
+              alt="calendar"
+            />
+            <h3 className="text-sm font-medium text-customBrown">
+              21 March 2024
+            </h3>
+            <Image src="/ArrowRight.png" width={16} height={16} alt="arrow" />
+            <h4 className="text-sm font-medium text-customBrown">
+              21 April 2024
+            </h4>
           </div>
           <h2 className="text-[24px] font-semibold">Bahamas Family Trip</h2>
           <div className="flex justify-start items-center space-x-1">
@@ -60,7 +66,6 @@ const MainPage = () => {
               Solo Trip
             </p>
           </div>
-
         </div>
         <div className="h-11 hidden md:w-[192px] md:flex space-x-2">
           <div className="bg-customBlue flex items-center justify-center md:w-[160px] h-10">
@@ -109,14 +114,12 @@ const MainPage = () => {
         </div>
       </div>
 
-
       <div className="w-[213px] h-[52px] ml-6 mt-24">
-          <h2 className="text-xl font-semibold">Trip itineraries</h2>
-          <p className="text-xs text-customGrayBlue font-medium">
-            Your trip itineraries are placed here
-          </p>
+        <h2 className="text-xl font-semibold">Trip itineraries</h2>
+        <p className="text-xs text-customGrayBlue font-medium">
+          Your trip itineraries are placed here
+        </p>
       </div>
-
 
       <div className="bg-customLightGray w-full md:w-[1412px] h-[900px] md:h-[710px] flex flex-col items-center">
         <div className="w-full md:w-[1366px] h-[46px] mt-5 flex justify-between ">
@@ -141,8 +144,6 @@ const MainPage = () => {
         </div>
       </div>
 
-
-      
       {/* HotelCard */}
       <div className="bg-customBlack md:w-[1412px] h-[1200px] md:h-[710px] flex flex-col items-center">
         <div className="w-full md:w-[1366px] h-[46px] mt-5 flex justify-between ">
@@ -167,7 +168,6 @@ const MainPage = () => {
         </div>
       </div>
 
-
       {/* Activities */}
       <div className="bg-blue-600 md:w-[1412px] h-[1200px] md:h-[710px] flex flex-col items-center">
         <div className="w-full md:w-[1366px] h-[46px] mt-5 flex justify-between ">
@@ -191,8 +191,6 @@ const MainPage = () => {
           <AttractionsCard />
         </div>
       </div>
-
-
     </div>
   );
 };
