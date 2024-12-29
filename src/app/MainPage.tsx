@@ -25,7 +25,7 @@ const MainPage = () => {
     }
 
   return (
-    <div className="ml-6 mr-6 mt-10  w-[340px] md:w-[1478px] h-[3316px] bg-white">
+    <div className="ml-6 mr-6 mt-10 w-[340px] md:w-[1478px] h-[3316px] bg-white">
       <div className="relative md:w-[1412px] mt-5 md:ml-6">
         <Image src="/banner.png" width={1412} height={200} alt="banner" className="h-20 w-full md:w-[1412px] md:h-[200px]"/>
         <div className="items-center justify-center flex md:w-16 md:h-16 w-3 h-3 top-7 left-2 absolute md:top-5 md:left-6">
@@ -144,7 +144,7 @@ const MainPage = () => {
 
       
       {/* HotelCard */}
-      <div className=" bg-customBlack w-full md:w-[1412px] h-[1200px] md:h-[710px] flex flex-col items-center">
+      <div className="bg-customBlack md:w-[1412px] h-[1200px] md:h-[710px] flex flex-col items-center">
         <div className="w-full md:w-[1366px] h-[46px] mt-5 flex justify-between ">
           <div className="w-[110px] h-11">
             <IconWithText
@@ -161,7 +161,7 @@ const MainPage = () => {
             onClick={handleAddFlightsClick}
           />
         </div>
-        <div className="w-full md:w-[1366px] h-[572px] mr-3 mt-7 space-y-6">
+        <div className="w-[320px] md:w-[1366px] h-[572px] mt-7 space-y-6">
           <HotelsCard />
           <HotelsCard />
         </div>
